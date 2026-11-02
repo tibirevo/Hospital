@@ -1,6 +1,6 @@
 package org.example.hospital.model;
 
-public class Nurse extends MedicalStaff{
+public class Nurse extends MedicalStaff {
     public enum QualificationLevel {
         REGISTERED_NURSE,
         PRACTICAL_NURSE
