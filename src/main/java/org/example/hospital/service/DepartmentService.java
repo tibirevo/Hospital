@@ -2,7 +2,6 @@ package org.example.hospital.service;
 
 import org.example.hospital.model.Department;
 import org.example.hospital.repository.CrudRepository;
-import org.example.hospital.repository.DepartmentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.List;
 public class DepartmentService {
     private final CrudRepository<Department> departmentRepository;
 
-    public DepartmentService(DepartmentRepository departmentRepository) {
+    public DepartmentService(CrudRepository<Department> departmentRepository) {
         this.departmentRepository = departmentRepository;
     }
 
