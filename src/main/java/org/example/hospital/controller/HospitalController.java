@@ -1,6 +1,5 @@
 package org.example.hospital.controller;
 import org.example.hospital.model.Hospital;
-import org.example.hospital.service.HospitalService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
