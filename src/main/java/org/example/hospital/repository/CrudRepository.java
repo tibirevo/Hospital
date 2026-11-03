@@ -4,6 +4,6 @@ import java.util.List;
 public interface CrudRepository<T>{
     void save(T entity);
     List<T> findAll();
-    T findByID(String id);
-    void delete(String id);
+    void update(T oldEntity, T newEntity);
+    void delete(T entity);
 }
