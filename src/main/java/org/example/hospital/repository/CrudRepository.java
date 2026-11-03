@@ -6,5 +6,4 @@ public interface CrudRepository<T>{
     List<T> findAll();
     void update(T oldEntity, T newEntity);
     void delete(T entity);
-    T findByID(String id);
 }

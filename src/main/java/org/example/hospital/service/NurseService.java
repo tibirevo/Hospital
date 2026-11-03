@@ -40,7 +40,7 @@ public class NurseService {
     }
 
     public void deleteByID(String id) {
-        Nurse nurse = findByID(id);
+        Nurse nurse = this.findByID(id);
         if (nurse != null) {
             nurseRepository.delete(nurse);
         }
