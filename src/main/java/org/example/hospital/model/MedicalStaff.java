@@ -5,7 +5,7 @@ public abstract class MedicalStaff {
     private String id;
     private String name;
     private String departmentID;
-    //private List<Appointment> appointments; //o decomentez cand fac clasa Appointment
+    private List<Appointment> appointments;
 
     public MedicalStaff(){}
 
