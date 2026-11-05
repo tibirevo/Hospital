@@ -1,7 +1,6 @@
 package org.example.hospital.service;
 
 import org.example.hospital.model.Hospital;
-import org.example.hospital.model.Nurse;
 import org.example.hospital.repository.HospitalRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;

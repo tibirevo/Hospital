@@ -1,6 +1,5 @@
 package org.example.hospital.service;
 
-import org.example.hospital.model.Hospital;
 import org.example.hospital.model.Room;
 import org.example.hospital.repository.RoomRepository;
 import org.springframework.stereotype.Service;
