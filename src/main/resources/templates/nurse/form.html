@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>New Nurse</title>
 </head>
 <body>
+<h1>Create Nurse</h1>
 
+<form th:action="@{/nurse}" th:object="${nurse}" method="post">
+    <div>
+        <label>ID:</label>
+        <input type="text" th:field="*{id}" />
+    </div>
+    <div>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" />
+    </div>
+    <div>
+        <label>Department ID:</label>
+        <input type="text" th:field="*{departmentId}" />
+    </div>
+    <div>
+        <label>Qualification Level:</label>
+        <input type="text" th:field="*{qualificationLevel}" />
+    </div>
+    <button type="submit">Save</button>
+</form>
+
+<p><a th:href="@{/nurse}">Back to List</a></p>
 </body>
 </html>
