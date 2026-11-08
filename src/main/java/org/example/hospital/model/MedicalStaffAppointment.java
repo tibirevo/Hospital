@@ -2,38 +2,24 @@ package org.example.hospital.model;
 
 public class MedicalStaffAppointment {
     private String id;
-    private String appointmentID;
-    private String medicalStaffID;
+    private String appointmentId;
+    private String medicalStaffId;
 
-    public MedicalStaffAppointment(){}
+    public MedicalStaffAppointment() {
+    }
 
-    public MedicalStaffAppointment(String id, String appointmentID, String medicalStaffID){
+    public MedicalStaffAppointment(String id, String appointmentId, String medicalStaffId) {
         this.id = id;
-        this.appointmentID = appointmentID;
-        this.medicalStaffID = medicalStaffID;
+        this.appointmentId = appointmentId;
+        this.medicalStaffId = medicalStaffId;
     }
 
-    public String getId() {
-        return id;
-    }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    public String getAppointmentId() { return appointmentId; }
+    public void setAppointmentId(String appointmentId) { this.appointmentId = appointmentId; }
 
-    public String getAppointmentID() {
-        return appointmentID;
-    }
-
-    public void setAppointmentID(String appointmentID) {
-        this.appointmentID = appointmentID;
-    }
-
-    public String getMedicalStaffID() {
-        return medicalStaffID;
-    }
-
-    public void setMedicalStaffID(String medicalStaffID) {
-        this.medicalStaffID = medicalStaffID;
-    }
+    public String getMedicalStaffId() { return medicalStaffId; }
+    public void setMedicalStaffId(String medicalStaffId) { this.medicalStaffId = medicalStaffId; }
 }

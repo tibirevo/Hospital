@@ -1,28 +1,34 @@
 package org.example.hospital.model;
+
+import org.springframework.format.annotation.DateTimeFormat;
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.ArrayList;
 
 public class Appointment {
+
     public enum AppointmentStatus {
-        ACTIVE,
-        COMPLETED
+        SCHEDULED,
+        COMPLETED,
+        CANCELLED
     }
 
     private String id;
-    private String departmentID;
-    private String patientID;
+    private String patientId;
+    private String departmentId;
+    private String roomId;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime admissionDate;
+
     private AppointmentStatus status;
-    private List<MedicalStaff> medicalStaff = new ArrayList<>();
 
     public Appointment() {
     }
 
-    public Appointment(String id, String departmentID, String patientID, LocalDateTime admissionDate, AppointmentStatus status) {
+    public Appointment(String id, String patientId, String departmentId, String roomId, LocalDateTime admissionDate, AppointmentStatus status) {
         this.id = id;
-        this.departmentID = departmentID;
-        this.patientID = patientID;
+        this.patientId = patientId;
+        this.departmentId = departmentId;
+        this.roomId = roomId;
         this.admissionDate = admissionDate;
         this.status = status;
     }
@@ -35,20 +41,28 @@ public class Appointment {
         this.id = id;
     }
 
-    public String getDepartmentID() {
-        return departmentID;
+    public String getPatientId() {
+        return patientId;
     }
 
-    public void setDepartmentID(String departmentID) {
-        this.departmentID = departmentID;
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
     }
 
-    public String getPatientID() {
-        return patientID;
+    public String getDepartmentId() {
+        return departmentId;
     }
 
-    public void setPatientID(String patientID) {
-        this.patientID = patientID;
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
     }
 
     public LocalDateTime getAdmissionDate() {
@@ -65,13 +79,5 @@ public class Appointment {
 
     public void setStatus(AppointmentStatus status) {
         this.status = status;
-    }
-
-    public List<MedicalStaff> getMedicalStaff() {
-        return medicalStaff;
-    }
-
-    public void setMedicalStaff(List<MedicalStaff> medicalStaff) {
-        this.medicalStaff = medicalStaff;
     }
 }

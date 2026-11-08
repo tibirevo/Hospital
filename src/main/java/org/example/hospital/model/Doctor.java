@@ -40,3 +40,4 @@ public class Doctor extends MedicalStaff {
         this.yearsOfExperience = yearsOfExperience;
     }
 }
+

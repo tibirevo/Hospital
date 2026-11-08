@@ -30,7 +30,11 @@
     </div>
     <div>
         <label>Status:</label>
-        <input type="text" th:field="*{status}" />
+        <select th:field="*{status}">
+            <option value="SCHEDULED">SCHEDULED</option>
+            <option value="COMPLETED">COMPLETED</option>
+            <option value="CANCELLED">CANCELLED</option>
+        </select>
     </div>
     <button type="submit">Save</button>
 </form>

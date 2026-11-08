@@ -15,6 +15,7 @@
         <th>Number</th>
         <th>Capacity</th>
         <th>Department ID</th>
+        <th>Status</th>
         <th>Actions</th>
     </tr>
     </thead>
@@ -24,6 +25,7 @@
         <td th:text="${item.number}"></td>
         <td th:text="${item.capacity}"></td>
         <td th:text="${item.departmentId}"></td>
+        <td th:text="${item.status}"></td>
         <td>
             <form th:action="@{'/room/' + ${item.id} + '/delete'}" method="post">
                 <button type="submit">Delete</button>

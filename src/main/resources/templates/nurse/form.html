@@ -22,7 +22,11 @@
     </div>
     <div>
         <label>Qualification Level:</label>
-        <input type="text" th:field="*{qualificationLevel}" />
+        <select th:field="*{qualificationLevel}">
+            <option value="JUNIOR">JUNIOR</option>
+            <option value="SENIOR">SENIOR</option>
+            <option value="HEAD">HEAD</option>
+        </select>
     </div>
     <button type="submit">Save</button>
 </form>

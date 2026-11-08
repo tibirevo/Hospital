@@ -24,6 +24,13 @@
         <label>Department ID:</label>
         <input type="text" th:field="*{departmentId}" />
     </div>
+    <div>
+        <label>Status:</label>
+        <select th:field="*{status}">
+            <option value="AVAILABLE">AVAILABLE</option>
+            <option value="OCCUPIED">OCCUPIED</option>
+        </select>
+    </div>
     <button type="submit">Save</button>
 </form>
 

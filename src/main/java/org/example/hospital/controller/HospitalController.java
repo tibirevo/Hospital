@@ -24,7 +24,7 @@ public class HospitalController {
 
     @GetMapping("/new")
     public String showCreateForm(Model model) {
-        model.addAttribute("hospitals", new Hospital());
+        model.addAttribute("hospital", new Hospital());
         return "hospital/form";
     }
 
