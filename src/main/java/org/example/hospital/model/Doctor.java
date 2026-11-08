@@ -1,17 +1,16 @@
 package org.example.hospital.model;
 
-import javax.print.Doc;
-
-public class Doctor extends MedicalStaff{
+public class Doctor extends MedicalStaff {
     private String licenseNumber;
-
     private String specialization;
     private int yearsOfExperience;
 
-    public Doctor() {}
+    public Doctor() {
+        super();
+    }
 
-    public Doctor(String id, String name, String departmentID, String licenseNumber, String specialization, int yearsOfExperience) {
-        super(id, name, departmentID);
+    public Doctor(String id, String name, String departmentId, String licenseNumber, String specialization, int yearsOfExperience) {
+        super(id, name, departmentId);
         this.licenseNumber = licenseNumber;
         this.specialization = specialization;
         this.yearsOfExperience = yearsOfExperience;
@@ -20,6 +19,7 @@ public class Doctor extends MedicalStaff{
     public String getLicenseNumber() {
         return licenseNumber;
     }
+
     public void setLicenseNumber(String licenseNumber) {
         this.licenseNumber = licenseNumber;
     }

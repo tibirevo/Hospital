@@ -14,6 +14,8 @@
         <th>ID</th>
         <th>Name</th>
         <th>City</th>
+        <th>Address</th>
+        <th>Phone Number</th>
         <th>Actions</th>
     </tr>
     </thead>
@@ -22,6 +24,8 @@
         <td th:text="${item.id}"></td>
         <td th:text="${item.name}"></td>
         <td th:text="${item.city}"></td>
+        <td th:text="${item.address}"></td>
+        <td th:text="${item.phoneNumber}"></td>
         <td>
             <form th:action="@{'/hospital/' + ${item.id} + '/delete'}" method="post">
                 <button type="submit">Delete</button>

@@ -1,25 +1,20 @@
 package org.example.hospital.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Hospital {
     private String id;
     private String name;
     private String city;
-    private List<Department> departments = new ArrayList<>();
-    private List<Room> rooms = new ArrayList<>();
-
-    private String adress;
+    private String address;
     private String phoneNumber;
 
-    public Hospital() {}
+    public Hospital() {
+    }
 
-    public Hospital(String id, String name, String city, String adress, String phoneNumber) {
+    public Hospital(String id, String name, String city, String address, String phoneNumber) {
         this.id = id;
         this.name = name;
         this.city = city;
-        this.adress = adress;
+        this.address = address;
         this.phoneNumber = phoneNumber;
     }
 
@@ -47,28 +42,12 @@ public class Hospital {
         this.city = city;
     }
 
-    public List<Department> getDepartments() {
-        return departments;
+    public String getAddress() {
+        return address;
     }
 
-    public void setDepartments(List<Department> departments) {
-        this.departments = departments;
-    }
-
-    public List<Room> getRooms() {
-        return rooms;
-    }
-
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhoneNumber() {

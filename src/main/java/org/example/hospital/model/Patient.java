@@ -1,23 +1,18 @@
 package org.example.hospital.model;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.ArrayList;
 
 public class Patient {
     private String id;
     private String name;
-    private List<Appointment> appointments = new ArrayList<>();
-
-    private LocalDate birthDate;
+    private int age;
     private String bloodType;
 
-    public Patient(){}
+    public Patient() {
+    }
 
-    public Patient(String id, String name, LocalDate birthDate, String bloodType){
+    public Patient(String id, String name, int age, String bloodType) {
         this.id = id;
         this.name = name;
-        this.birthDate = birthDate;
+        this.age = age;
         this.bloodType = bloodType;
     }
 
@@ -37,20 +32,12 @@ public class Patient {
         this.name = name;
     }
 
-    public List<Appointment> getAppointments() {
-        return appointments;
+    public int getAge() {
+        return age;
     }
 
-    public void setAppointments(List<Appointment> appointments) {
-        this.appointments = appointments;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getBloodType() {

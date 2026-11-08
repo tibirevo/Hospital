@@ -1,38 +1,40 @@
 package org.example.hospital.model;
-import java.util.List;
 
 public abstract class MedicalStaff {
     private String id;
     private String name;
-    private String departmentID;
-    private List<Appointment> appointments;
+    private String departmentId;
 
-    public MedicalStaff(){}
-
-    public MedicalStaff(String id, String name, String departmentID){
-        this.id = id;
-        this.name = name;
-        this.departmentID = departmentID;
+    public MedicalStaff() {
     }
 
-    public String getId(){
+    public MedicalStaff(String id, String name, String departmentId) {
+        this.id = id;
+        this.name = name;
+        this.departmentId = departmentId;
+    }
+
+    public String getId() {
         return id;
     }
-    public void setID(String id){
+
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getDepartmentID(){
-        return departmentID;
+    public String getDepartmentId() {
+        return departmentId;
     }
-    public void setDepartmentID(String departmentID){
-        this.departmentID = departmentID;
+
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
     }
 }
