@@ -18,7 +18,7 @@ public abstract class InFileRepository<T> implements CrudRepository<T> {
     private final ObjectMapper objectMapper;
     protected List<T> items = new ArrayList<>();
 
-    public inFileRepository(String filename, Class<T> type) {
+    public InFileRepository(String filename, Class<T> type) {
         this.file = new File("src/main/resources/data/" + filename);
         this.type = type;
         this.objectMapper = new ObjectMapper();
@@ -47,7 +47,7 @@ public abstract class InFileRepository<T> implements CrudRepository<T> {
             }
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, items);
         } catch (IOException e) {
-            throw new RuntimeException("Eroare la scrierea in fisierul JSON: " + file.getPath(), e)
+            throw new RuntimeException("Eroare la scrierea in fisierul JSON: " + file.getPath(), e);
         }
     }
 
