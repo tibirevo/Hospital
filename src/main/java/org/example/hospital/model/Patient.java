@@ -1,18 +1,25 @@
 package org.example.hospital.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import java.time.LocalDate;
+
+
 public class Patient {
     private String id;
     private String name;
-    private int age;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate birthDate;
+
     private String bloodType;
 
     public Patient() {
     }
 
-    public Patient(String id, String name, int age, String bloodType) {
+    public Patient(String id, String name, LocalDate birthDate, String bloodType) {
         this.id = id;
         this.name = name;
-        this.age = age;
+        this.birthDate = birthDate;
         this.bloodType = bloodType;
     }
 
@@ -32,12 +39,11 @@ public class Patient {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
-
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getBloodType() {

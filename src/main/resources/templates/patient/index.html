@@ -13,7 +13,7 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Age</th>
+        <th>Birth Date</th>
         <th>Diagnosis</th>
         <th>Actions</th>
     </tr>
@@ -22,7 +22,7 @@
     <tr th:each="item : ${patients}">
         <td th:text="${item.id}"></td>
         <td th:text="${item.name}"></td>
-        <td th:text="${item.age}"></td>
+        <td th:text="${item.birthDate}"></td>
         <td th:text="${item.bloodType}"></td>
         <td>
             <form th:action="@{'/patient/' + ${item.id} + '/delete'}" method="post">
