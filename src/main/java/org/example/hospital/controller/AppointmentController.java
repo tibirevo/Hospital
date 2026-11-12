@@ -32,9 +32,28 @@ public class AppointmentController {
         return "redirect:/appointment";
     }
 
+    @GetMapping("/{id}")
+    public String showDetails(@PathVariable("id") String id, Model model) {
+        model.addAttribute("appointment", appointmentService.findById(id));
+        return "appointment/details";
+    }
+
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable("id") String id, Model model) {
+        model.addAttribute("appointment", appointmentService.findById(id));
+        return "appointment/edit";
+    }
+
+    @PostMapping("/{id}/edit")
+    public String updateAppointment(@PathVariable("id") String id, @ModelAttribute("appointment") Appointment appointment){
+        appointment.setId(id);
+        appointmentService.update(appointment);
+        return "redirect:/appointment";
+    }
+
     @PostMapping("/{id}/delete")
     public String deleteAppointment(@PathVariable("id") String id){
-        appointmentService.deleteByID(id);
+        appointmentService.deleteById(id);
         return "redirect:/appointment";
     }
 }
