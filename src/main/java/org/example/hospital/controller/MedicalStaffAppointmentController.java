@@ -37,20 +37,20 @@ public class MedicalStaffAppointmentController {
     @GetMapping("/{id}")
     public String showDetails(@PathVariable("id") String id, Model model) {
         model.addAttribute("medicalStaffAppointment", medicalStaffAppointmentService.findById(id));
-        return "medicalStaffAppointment/details";
+        return "medicalstaffappointment/details";
     }
 
     @GetMapping("/{id}/edit")
     public String showEditForm(@PathVariable("id") String id, Model model) {
         model.addAttribute("medicalStaffAppointment", medicalStaffAppointmentService.findById(id));
-        return "medicalStaffAppointment/edit";
+        return "medicalstaffappointment/edit";
     }
 
     @PostMapping("/{id}/edit")
     public String update(@PathVariable("id") String id, @ModelAttribute("medicalStaffAppointment") MedicalStaffAppointment medicalStaffAppointment) {
         medicalStaffAppointment.setId(id);
         medicalStaffAppointmentService.update(medicalStaffAppointment);
-        return "redirect:/medicalStaffAppointment";
+        return "redirect:/medicalstaffappointment";
     }
 
     @PostMapping("/{id}/delete")
