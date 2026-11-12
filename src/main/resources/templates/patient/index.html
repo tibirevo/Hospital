@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Patients</title>
-</head>
+<head><meta charset="UTF-8"><title>Patients</title></head>
 <body>
 <h1>Patients List</h1>
 <p><a th:href="@{/patient/new}">Add New Patient</a></p>
-
 <table border="1">
     <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Birth Date</th>
-        <th>Diagnosis</th>
-        <th>Actions</th>
-    </tr>
+    <tr><th>ID</th><th>Name</th><th>Birth Date</th><th>Diagnosis</th><th>Actions</th></tr>
     </thead>
     <tbody>
     <tr th:each="item : ${patients}">
         <td th:text="${item.id}"></td>
         <td th:text="${item.name}"></td>
         <td th:text="${item.birthDate}"></td>
-        <td th:text="${item.bloodType}"></td>
+        <td th:text="${item.diagnosis}"></td>
         <td>
-            <form th:action="@{'/patient/' + ${item.id} + '/delete'}" method="post">
+            <a th:href="@{'/patient/' + ${item.id}}">Details</a> |
+            <a th:href="@{'/patient/' + ${item.id} + '/edit'}">Edit</a> |
+            <form th:action="@{'/patient/' + ${item.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>
         </td>
