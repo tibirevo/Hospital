@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Edit Nurse</title></head>
+<body>
+<h1>Edit Nurse</h1>
+<form th:action="@{'/nurse/' + ${nurse.id} + '/edit'}" th:object="${nurse}" method="post">
+    <div><label>ID:</label><input type="text" th:field="*{id}" readonly /></div>
+    <div><label>Name:</label><input type="text" th:field="*{name}" /></div>
+    <div><label>Department ID:</label><input type="text" th:field="*{departmentId}" /></div>
+    <div>
+        <label>Qualification Level:</label>
+        <select th:field="*{qualificationLevel}">
+            <option value="JUNIOR">JUNIOR</option>
+            <option value="SENIOR">SENIOR</option>
+            <option value="HEAD">HEAD</option>
+        </select>
+    </div>
+    <div><label>Shift:</label><input type="text" th:field="*{shift}" /></div>
+    <div><label>Years of Experience:</label><input type="number" th:field="*{yearsOfExperience}" /></div>
+    <button type="submit">Update</button>
+</form>
+<p><a th:href="@{/nurse}">Back to List</a></p>
+</body>
+</html>
