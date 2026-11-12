@@ -47,7 +47,7 @@ public class HospitalController {
     }
 
     @PostMapping("/{id}/edit")
-    public String updateHospital(@PathVariable("id") String id, @ModelAttribute Hospital hospital) {
+    public String updateHospital(@PathVariable("id") String id, @ModelAttribute("hospital") Hospital hospital) {
         hospital.setId(id);
         hospitalService.update(hospital);
         return "redirect:/hospital";
