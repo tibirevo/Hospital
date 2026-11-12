@@ -4,5 +4,8 @@ import org.example.hospital.model.Doctor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class DoctorRepository extends InMemoryRepository<Doctor>{
+public class DoctorRepository extends InFileRepository<Doctor>{
+    public DoctorRepository() {
+        super("doctor.json", Doctor.class);
+    }
 }
