@@ -34,23 +34,20 @@ public class DoctorController {
 
     @GetMapping("/{id}")
     public String showDoctorDetails(@PathVariable("id") String id, Model model) {
-        model.addAttribute("doctor", doctorService.findByID(id));
+        model.addAttribute("doctor", doctorService.findById(id));
         return "doctor/details";
     }
 
     @GetMapping("/{id}/edit")
     public String showEditForm(@PathVariable("id") String id, Model model) {
-        model.addAttribute("doctor", doctorService.findByID(id));
+        model.addAttribute("doctor", doctorService.findById(id));
         return "doctor/edit";
     }
 
     @PostMapping("/{id}/edit")
-    public String updateDoctor(@PathVariable("id") String id, @ModelAttribute("doctor") Doctor newDoctor) {
-        newDoctor.setId(id);
-        Doctor oldDoctor = doctorService.findByID(id);
-        if(oldDoctor !=  null) {
-            doctorService.update(oldDoctor, newDoctor);
-        }
+    public String updateDoctor(@PathVariable("id") String id, @ModelAttribute("doctor") Doctor doctor) {
+        doctor.setId(id);
+        doctorService.update(doctor);
         return "redirect:/doctor";
     }
 
