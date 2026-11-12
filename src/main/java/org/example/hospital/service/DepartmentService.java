@@ -36,7 +36,7 @@ public class DepartmentService {
         }
     }
 
-    public void deleteByID(String id){
+    public void deleteById(String id){
         Department department = departmentRepository.findById(id);
         if(department != null){
             departmentRepository.delete(department);

@@ -38,7 +38,7 @@ public class HospitalService {
         }
     }
 
-    public void deleteByID(String id) {
+    public void deleteById(String id) {
         Hospital hospital = hospitalRepository.findById(id);
         if (hospital != null) {
             hospitalRepository.delete(hospital);
