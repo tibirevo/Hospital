@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Edit Room</title></head>
+<body>
+<h1>Edit Room</h1>
+<form th:action="@{'/room/' + ${room.id} + '/edit'}" th:object="${room}" method="post">
+    <div><label>ID:</label><input type="text" th:field="*{id}" readonly /></div>
+    <div><label>Number:</label><input type="text" th:field="*{number}" /></div>
+    <div><label>Capacity:</label><input type="number" th:field="*{capacity}" /></div>
+    <div><label>Department ID:</label><input type="text" th:field="*{departmentId}" /></div>
+    <div>
+        <label>Status:</label>
+        <select th:field="*{status}">
+            <option value="AVAILABLE">AVAILABLE</option>
+            <option value="OCCUPIED">OCCUPIED</option>
+        </select>
+    </div>
+    <button type="submit">Update</button>
+</form>
+<p><a th:href="@{/room}">Back to List</a></p>
+</body>
+</html>
