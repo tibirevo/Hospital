@@ -53,7 +53,7 @@ public class DoctorController {
 
     @PostMapping("/{id}/delete")
     public String deleteDoctor(@PathVariable("id") String id){
-        doctorService.deleteByID(id);
+        doctorService.deleteById(id);
         return "redirect:/doctor";
     }
 }
