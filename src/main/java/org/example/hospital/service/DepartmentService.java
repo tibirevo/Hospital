@@ -20,7 +20,7 @@ public class DepartmentService {
         departmentRepository.save(department);
     }
 
-    public Department findByID(String id){
+    public Department findById(String id){
         for(Department department : departmentRepository.findAll()){
             if(department.getId() != null && department.getId().equals(id)){
                 return department;
@@ -29,16 +29,15 @@ public class DepartmentService {
         return null;
     }
 
-    public void update(Department oldDepartment, Department newDepartment){
-        departmentRepository.update(oldDepartment, newDepartment);
-    }
-
-    public void delete(Department department){
-        departmentRepository.delete(department);
+    public void update(Department newDepartment){
+        Department oldDepartment = departmentRepository.findById(newDepartment.getId());
+        if(oldDepartment != null){
+            departmentRepository.update(oldDepartment, newDepartment);
+        }
     }
 
     public void deleteByID(String id){
-        Department department = this.findByID(id);
+        Department department = departmentRepository.findById(id);
         if(department != null){
             departmentRepository.delete(department);
         }
