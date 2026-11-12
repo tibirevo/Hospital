@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Departments</title>
-</head>
+<head><meta charset="UTF-8"><title>Departments</title></head>
 <body>
 <h1>Departments List</h1>
 <p><a th:href="@{/department/new}">Add New Department</a></p>
-
 <table border="1">
     <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Hospital ID</th>
-        <th>Actions</th>
-    </tr>
+    <tr><th>ID</th><th>Name</th><th>Hospital ID</th><th>Actions</th></tr>
     </thead>
     <tbody>
     <tr th:each="item : ${departments}">
@@ -23,7 +14,9 @@
         <td th:text="${item.name}"></td>
         <td th:text="${item.hospitalId}"></td>
         <td>
-            <form th:action="@{'/department/' + ${item.id} + '/delete'}" method="post">
+            <a th:href="@{'/department/' + ${item.id}}">Details</a> |
+            <a th:href="@{'/department/' + ${item.id} + '/edit'}">Edit</a> |
+            <form th:action="@{'/department/' + ${item.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>
         </td>
