@@ -34,9 +34,28 @@ public class HospitalController {
         return "redirect:/hospital";
     }
 
+    @GetMapping("/{id}")
+    public String showDetails(@PathVariable("id") String id, Model model) {
+        model.addAttribute("hospital", hospitalService.findByID(id));
+        return "hospital/details";
+    }
+
+    @GetMapping("/{id}")
+    public String showEditForm(@PathVariable("id") String id, Model model) {
+        model.addAttribute("hospital", hospitalService.findByID(id));
+        return "hospital/edit";
+    }
+
+    @PostMapping("/{id}/edit")
+    public String updateHospital(@PathVariable("id") String id, @ModelAttribute Hospital hospital) {
+        hospital.setId(id);
+        hospitalService.update(hospital);
+        return "redirect:/hospital";
+    }
+
     @PostMapping("/{id}/delete")
     public String deleteHospital(@PathVariable("id") String id) {
-        hospitalService.deleteByID(id);
+        hospitalService.deleteById(id);
         return "redirect:/hospital";
     }
 }
