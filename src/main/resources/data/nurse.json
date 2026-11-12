@@ -1,12 +1,41 @@
-[
-  { "id": "N1", "name": "Maria Enache", "departmentId": "DEP1", "qualificationLevel": "SENIOR" },
-  { "id": "N2", "name": "Carmen Voicu", "departmentId": "DEP1", "qualificationLevel": "JUNIOR" },
-  { "id": "N3", "name": "Daniela Lungu", "departmentId": "DEP2", "qualificationLevel": "HEAD" },
-  { "id": "N4", "name": "Simona Badea", "departmentId": "DEP2", "qualificationLevel": "SENIOR" },
-  { "id": "N5", "name": "Raluca Florea", "departmentId": "DEP3", "qualificationLevel": "JUNIOR" },
-  { "id": "N6", "name": "Gabriela Oprea", "departmentId": "DEP3", "qualificationLevel": "HEAD" },
-  { "id": "N7", "name": "Alina Dobre", "departmentId": "DEP4", "qualificationLevel": "SENIOR" },
-  { "id": "N8", "name": "Bianca Nistor", "departmentId": "DEP4", "qualificationLevel": "JUNIOR" },
-  { "id": "N9", "name": "Cristina Toma", "departmentId": "DEP5", "qualificationLevel": "SENIOR" },
-  { "id": "N10", "name": "Laura Tudor", "departmentId": "DEP5", "qualificationLevel": "HEAD" }
-]
+[ {
+  "id" : "N3",
+  "name" : "LAAAAN",
+  "departmentId" : "DEP2",
+  "qualificationLevel" : "HEAD"
+}, {
+  "id" : "N4",
+  "name" : "Simona Badea",
+  "departmentId" : "DEP2",
+  "qualificationLevel" : "SENIOR"
+}, {
+  "id" : "N5",
+  "name" : "Raluca Florea",
+  "departmentId" : "DEP3",
+  "qualificationLevel" : "JUNIOR"
+}, {
+  "id" : "N6",
+  "name" : "Gabriela Oprea",
+  "departmentId" : "DEP3",
+  "qualificationLevel" : "HEAD"
+}, {
+  "id" : "N7",
+  "name" : "Alina Dobre",
+  "departmentId" : "DEP4",
+  "qualificationLevel" : "SENIOR"
+}, {
+  "id" : "N8",
+  "name" : "Bianca Nistor",
+  "departmentId" : "DEP4",
+  "qualificationLevel" : "JUNIOR"
+}, {
+  "id" : "N9",
+  "name" : "Cristina Toma",
+  "departmentId" : "DEP5",
+  "qualificationLevel" : "SENIOR"
+}, {
+  "id" : "N10",
+  "name" : "Laura Tudor",
+  "departmentId" : "DEP5",
+  "qualificationLevel" : "HEAD"
+} ]
