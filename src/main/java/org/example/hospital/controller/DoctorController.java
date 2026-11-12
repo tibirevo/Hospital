@@ -32,6 +32,28 @@ public class DoctorController {
         return "redirect:/doctor";
     }
 
+    @GetMapping("/{id}")
+    public String showDoctorDetails(@PathVariable("id") String id, Model model) {
+        model.addAttribute("doctor", doctorService.findByID(id));
+        return "doctor/details";
+    }
+
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable("id") String id, Model model) {
+        model.addAttribute("doctor", doctorService.findByID(id));
+        return "doctor/edit";
+    }
+
+    @PostMapping("/{id}/edit")
+    public String updateDoctor(@PathVariable("id") String id, @ModelAttribute("doctor") Doctor newDoctor) {
+        newDoctor.setId(id);
+        Doctor oldDoctor = doctorService.findByID(id);
+        if(oldDoctor !=  null) {
+            doctorService.update(oldDoctor, newDoctor);
+        }
+        return "redirect:/doctor";
+    }
+
     @PostMapping("/{id}/delete")
     public String deleteDoctor(@PathVariable("id") String id){
         doctorService.deleteByID(id);
