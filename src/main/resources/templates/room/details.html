@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Room Details</title></head>
+<body>
+<h1>Room Details</h1>
+<p><strong>ID:</strong> <span th:text="${room.id}"></span></p>
+<p><strong>Number:</strong> <span th:text="${room.number}"></span></p>
+<p><strong>Capacity:</strong> <span th:text="${room.capacity}"></span></p>
+<p><strong>Department ID:</strong> <span th:text="${room.departmentId}"></span></p>
+<p><strong>Status:</strong> <span th:text="${room.status}"></span></p>
+<p><a th:href="@{'/room/' + ${room.id} + '/edit'}">Edit</a> | <a th:href="@{/room}">Back to List</a></p>
+</body>
+</html>
