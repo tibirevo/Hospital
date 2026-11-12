@@ -34,9 +34,28 @@ public class NurseController {
         return "redirect:/nurse";
     }
 
+    @GetMapping("/{id}")
+    public String showDetails(@PathVariable("id") String id, Model model) {
+        model.addAttribute("nurse", nurseService.findById(id));
+        return "nurse/details";
+    }
+
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable("id") String id, Model model) {
+        model.addAttribute("nurse", nurseService.findById(id));
+        return "nurse/edit";
+    }
+
+    @PostMapping("/{id}/edit")
+    public String updateNurse(@PathVariable("id") String id, @ModelAttribute("nurse") Nurse nurse) {
+        nurse.setId(id);
+        nurseService.update(nurse);
+        return "redirect:/nurse";
+    }
+
     @PostMapping("/{id}/delete")
     public String deleteNurse(@PathVariable("id") String id) {
-        nurseService.deleteByID(id);
+        nurseService.deleteById(id);
         return "redirect:/nurse";
     }
 }
