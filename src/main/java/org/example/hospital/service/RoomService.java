@@ -21,7 +21,7 @@ public class RoomService {
         roomRepository.save(room);
     }
 
-    public Room findByID(String id) {
+    public Room findById(String id) {
         for (Room room : roomRepository.findAll()) {
             if (room.getId() != null && room.getId().equals(id)) {
                 return room;
@@ -30,16 +30,15 @@ public class RoomService {
         return null;
     }
 
-    public void update (Room oldRoom, Room newRoom) {
-        roomRepository.update(oldRoom, newRoom);
+    public void update (Room newRoom) {
+        Room oldRoom = roomRepository.findById(newRoom.getId());
+        if(oldRoom != null){
+            roomRepository.update(oldRoom, newRoom);
+        }
     }
 
-    public void delete(Room room) {
-        roomRepository.delete(room);
-    }
-
-    public void deleteByID(String id) {
-        Room room = this.findByID(id);
+    public void deleteById(String id) {
+        Room room = roomRepository.findById(id);
         if (room != null) {
             roomRepository.delete(room);
         }

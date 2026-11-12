@@ -38,7 +38,7 @@ public class NurseService {
         }
     }
 
-    public void deleteByID(String id) {
+    public void deleteById(String id) {
         Nurse nurse = nurseRepository.findById(id);
         if (nurse != null) {
             nurseRepository.delete(nurse);
