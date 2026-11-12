@@ -20,7 +20,7 @@ public class AppointmentService {
         appointmentRepository.save(appointment);
     }
 
-    public Appointment findByID(String id){
+    public Appointment findById(String id){
         for(Appointment appointment : appointmentRepository.findAll()){
             if(appointment.getId() != null && appointment.getId().equals(id)){
                 return appointment;
@@ -29,16 +29,15 @@ public class AppointmentService {
         return null;
     }
 
-    public void update(Appointment oldAppointment, Appointment newAppointment){
-        appointmentRepository.update(oldAppointment, newAppointment);
+    public void update(Appointment newAppointment){
+        Appointment oldAppointment = appointmentRepository.findById(newAppointment.getId());
+        if(oldAppointment != null){
+            appointmentRepository.update(oldAppointment, newAppointment);
+        }
     }
 
-    public void delete(Appointment appointment){
-        appointmentRepository.delete(appointment);
-    }
-
-    public void deleteByID(String id){
-        Appointment appointment = this.findByID(id);
+    public void deleteById(String id){
+        Appointment appointment = appointmentRepository.findById(id);
         if(appointment != null){
             appointmentRepository.delete(appointment);
         }
