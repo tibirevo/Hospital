@@ -21,7 +21,7 @@ public class MedicalStaffAppointmentService {
         medicalStaffAppointmentRepository.save(medicalStaffAppointment);
     }
 
-    public MedicalStaffAppointment findByID(String id) {
+    public MedicalStaffAppointment findById(String id) {
         for(MedicalStaffAppointment medicalStaffAppointment : medicalStaffAppointmentRepository.findAll()) {
             if(medicalStaffAppointment.getId() != null && medicalStaffAppointment.getId().equals(id)) {
                 return medicalStaffAppointment;
@@ -30,16 +30,15 @@ public class MedicalStaffAppointmentService {
         return null;
     }
 
-    public void update(MedicalStaffAppointment oldMedicalStaffAppointment, MedicalStaffAppointment newMedicalStaffAppointment) {
-        medicalStaffAppointmentRepository.update(oldMedicalStaffAppointment, newMedicalStaffAppointment);
+    public void update(MedicalStaffAppointment newMedicalStaffAppointment) {
+        MedicalStaffAppointment oldMedicalStaffAppointment = medicalStaffAppointmentRepository.findById(newMedicalStaffAppointment.getId());
+        if(oldMedicalStaffAppointment != null){
+            medicalStaffAppointmentRepository.update(oldMedicalStaffAppointment, newMedicalStaffAppointment);
+        }
     }
 
-    public void delete(MedicalStaffAppointment medicalStaffAppointment) {
-        medicalStaffAppointmentRepository.delete(medicalStaffAppointment);
-    }
-
-    public void deleteByID(String id) {
-        MedicalStaffAppointment medicalStaffAppointment = this.findByID(id);
+    public void deleteById(String id) {
+        MedicalStaffAppointment medicalStaffAppointment = medicalStaffAppointmentRepository.findById(id);
         if (medicalStaffAppointment != null) {
             medicalStaffAppointmentRepository.delete(medicalStaffAppointment);
         }
