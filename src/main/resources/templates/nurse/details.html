@@ -7,8 +7,6 @@
 <p><strong>Name:</strong> <span th:text="${nurse.name}"></span></p>
 <p><strong>Department ID:</strong> <span th:text="${nurse.departmentId}"></span></p>
 <p><strong>Qualification Level:</strong> <span th:text="${nurse.qualificationLevel}"></span></p>
-<p><strong>Shift:</strong> <span th:text="${nurse.shift}"></span></p>
-<p><strong>Years of Experience:</strong> <span th:text="${nurse.yearsOfExperience}"></span></p>
 <p><a th:href="@{'/nurse/' + ${nurse.id} + '/edit'}">Edit</a> | <a th:href="@{/nurse}">Back to List</a></p>
 </body>
 </html>

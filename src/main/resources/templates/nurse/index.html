@@ -16,8 +16,6 @@
         <td th:text="${item.name}"></td>
         <td th:text="${item.departmentId}"></td>
         <td th:text="${item.qualificationLevel}"></td>
-        <td th:text="${item.shift}"></td>
-        <td th:text="${item.yearsOfExperience}"></td>
         <td>
             <a th:href="@{'/nurse/' + ${item.id}}">Details</a> |
             <a th:href="@{'/nurse/' + ${item.id} + '/edit'}">Edit</a> |

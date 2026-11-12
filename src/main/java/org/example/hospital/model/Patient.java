@@ -11,16 +11,16 @@ public class Patient {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
-    private String bloodType;
+    private String diagnosis;
 
     public Patient() {
     }
 
-    public Patient(String id, String name, LocalDate birthDate, String bloodType) {
+    public Patient(String id, String name, LocalDate birthDate, String diagnosis) {
         this.id = id;
         this.name = name;
         this.birthDate = birthDate;
-        this.bloodType = bloodType;
+        this.diagnosis = diagnosis;
     }
 
     public String getId() {
@@ -46,11 +46,11 @@ public class Patient {
         this.birthDate = birthDate;
     }
 
-    public String getBloodType() {
-        return bloodType;
+    public String getDiagnosis() {
+        return diagnosis;
     }
 
-    public void setBloodType(String bloodType) {
-        this.bloodType = bloodType;
+    public void setDiagnosis(String diagnosis) {
+        this.diagnosis = diagnosis;
     }
 }

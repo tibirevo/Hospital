@@ -1,12 +1,12 @@
 [
-  { "id": "N1", "name": "Maria Enache", "departmentId": "DEP1", "qualificationLevel": "SENIOR", "shift": "Morning", "yearsOfExperience": 10 },
-  { "id": "N2", "name": "Carmen Voicu", "departmentId": "DEP1", "qualificationLevel": "JUNIOR", "shift": "Night", "yearsOfExperience": 2 },
-  { "id": "N3", "name": "Daniela Lungu", "departmentId": "DEP2", "qualificationLevel": "HEAD", "shift": "Morning", "yearsOfExperience": 16 },
-  { "id": "N4", "name": "Simona Badea", "departmentId": "DEP2", "qualificationLevel": "SENIOR", "shift": "Evening", "yearsOfExperience": 8 },
-  { "id": "N5", "name": "Raluca Florea", "departmentId": "DEP3", "qualificationLevel": "JUNIOR", "shift": "Morning", "yearsOfExperience": 3 },
-  { "id": "N6", "name": "Gabriela Oprea", "departmentId": "DEP3", "qualificationLevel": "HEAD", "shift": "Morning", "yearsOfExperience": 19 },
-  { "id": "N7", "name": "Alina Dobre", "departmentId": "DEP4", "qualificationLevel": "SENIOR", "shift": "Night", "yearsOfExperience": 7 },
-  { "id": "N8", "name": "Bianca Nistor", "departmentId": "DEP4", "qualificationLevel": "JUNIOR", "shift": "Evening", "yearsOfExperience": 1 },
-  { "id": "N9", "name": "Cristina Toma", "departmentId": "DEP5", "qualificationLevel": "SENIOR", "shift": "Morning", "yearsOfExperience": 11 },
-  { "id": "N10", "name": "Laura Tudor", "departmentId": "DEP5", "qualificationLevel": "HEAD", "shift": "Evening", "yearsOfExperience": 14 }
+  { "id": "N1", "name": "Maria Enache", "departmentId": "DEP1", "qualificationLevel": "SENIOR" },
+  { "id": "N2", "name": "Carmen Voicu", "departmentId": "DEP1", "qualificationLevel": "JUNIOR" },
+  { "id": "N3", "name": "Daniela Lungu", "departmentId": "DEP2", "qualificationLevel": "HEAD" },
+  { "id": "N4", "name": "Simona Badea", "departmentId": "DEP2", "qualificationLevel": "SENIOR" },
+  { "id": "N5", "name": "Raluca Florea", "departmentId": "DEP3", "qualificationLevel": "JUNIOR" },
+  { "id": "N6", "name": "Gabriela Oprea", "departmentId": "DEP3", "qualificationLevel": "HEAD" },
+  { "id": "N7", "name": "Alina Dobre", "departmentId": "DEP4", "qualificationLevel": "SENIOR" },
+  { "id": "N8", "name": "Bianca Nistor", "departmentId": "DEP4", "qualificationLevel": "JUNIOR" },
+  { "id": "N9", "name": "Cristina Toma", "departmentId": "DEP5", "qualificationLevel": "SENIOR" },
+  { "id": "N10", "name": "Laura Tudor", "departmentId": "DEP5", "qualificationLevel": "HEAD" }
 ]
