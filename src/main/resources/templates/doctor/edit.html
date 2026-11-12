@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Doctor</title>
+</head>
+<body>
+<h1>Edit Doctor</h1>
+
+<form th:action="@{'/doctor/' + ${doctor.id} + '/edit'}" th:object="${doctor}" method="post">
+    <div>
+        <label>ID:</label>
+        <input type="text" th:field="*{id}" readonly />
+    </div>
+    <div>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" />
+    </div>
+    <div>
+        <label>Department ID:</label>
+        <input type="text" th:field="*{departmentId}" />
+    </div>
+    <div>
+        <label>License Number:</label>
+        <input type="text" th:field="*{licenseNumber}" />
+    </div>
+    <div>
+        <label>Specialization:</label>
+        <input type="text" th:field="*{specialization}" />
+    </div>
+    <div>
+        <label>Years of Experience:</label>
+        <input type="number" th:field="*{yearsOfExperience}" />
+    </div>
+    <button type="submit">Update</button>
+</form>
+
+<p><a th:href="@{/doctor}">Back to List</a></p>
+</body>
+</html>

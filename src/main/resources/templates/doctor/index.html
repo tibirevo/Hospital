@@ -29,7 +29,9 @@
         <td th:text="${item.specialization}"></td>
         <td th:text="${item.yearsOfExperience}"></td>
         <td>
-            <form th:action="@{'/doctor/' + ${item.id} + '/delete'}" method="post">
+            <a th:href="@{'/doctor/' + ${item.id}}">Details</a> |
+            <a th:href="@{'/doctor/' + ${item.id} + '/edit'}">Edit</a> |
+            <form th:action="@{'/doctor/' + ${item.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>
         </td>
