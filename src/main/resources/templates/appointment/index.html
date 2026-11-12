@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Appointments</title>
-</head>
+<head><meta charset="UTF-8"><title>Appointments</title></head>
 <body>
 <h1>Appointments List</h1>
 <p><a th:href="@{/appointment/new}">Add New Appointment</a></p>
-
 <table border="1">
     <thead>
-    <tr>
-        <th>ID</th>
-        <th>Patient ID</th>
-        <th>Department ID</th>
-        <th>Room ID</th>
-        <th>Admission Date</th>
-        <th>Status</th>
-        <th>Actions</th>
-    </tr>
+    <tr><th>ID</th><th>Patient ID</th><th>Department ID</th><th>Room ID</th><th>Admission Date</th><th>Status</th><th>Actions</th></tr>
     </thead>
     <tbody>
     <tr th:each="item : ${appointments}">
@@ -29,7 +17,9 @@
         <td th:text="${item.admissionDate}"></td>
         <td th:text="${item.status}"></td>
         <td>
-            <form th:action="@{'/appointment/' + ${item.id} + '/delete'}" method="post">
+            <a th:href="@{'/appointment/' + ${item.id}}">Details</a> |
+            <a th:href="@{'/appointment/' + ${item.id} + '/edit'}">Edit</a> |
+            <form th:action="@{'/appointment/' + ${item.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>
         </td>
