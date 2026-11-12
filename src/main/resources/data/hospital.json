@@ -1,0 +1,12 @@
+[
+  { "id": "H1", "name": "Spitalul Clinic Judetean Cluj", "city": "Cluj-Napoca", "address": "Str. Clinicilor 3-5", "phoneNumber": "0264597852" },
+  { "id": "H2", "name": "Spitalul Universitar Bucuresti", "city": "Bucuresti", "address": "Splaiul Independentei 169", "phoneNumber": "0213180522" },
+  { "id": "H3", "name": "Spitalul Judetean Timisoara", "city": "Timisoara", "address": "Bd. Liviu Rebreanu 156", "phoneNumber": "0356433111" },
+  { "id": "H4", "name": "Spitalul Clinic Sf. Spiridon", "city": "Iasi", "address": "Bd. Independentei 1", "phoneNumber": "0232240822" },
+  { "id": "H5", "name": "Spitalul Clinic Judetean Brasov", "city": "Brasov", "address": "Calea Bucuresti 25", "phoneNumber": "0268320022" },
+  { "id": "H6", "name": "Spitalul Clinic Judetean Sibiu", "city": "Sibiu", "address": "Bd. Corneliu Coposu 2", "phoneNumber": "0269215050" },
+  { "id": "H7", "name": "Spitalul Judetean Oradea", "city": "Oradea", "address": "Str. Gheorghe Doja 65", "phoneNumber": "0259417169" },
+  { "id": "H8", "name": "Spitalul Judetean Constanta", "city": "Constanta", "address": "Bd. Tomis 145", "phoneNumber": "0241616789" },
+  { "id": "H9", "name": "Spitalul Clinic Judetean Craiova", "city": "Craiova", "address": "Str. Tabaci 1", "phoneNumber": "0251502200" },
+  { "id": "H10", "name": "Spitalul Judetean Targu Mures", "city": "Targu Mures", "address": "Str. Gheorghe Marinescu 50", "phoneNumber": "0265212111" }
+]
