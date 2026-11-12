@@ -1,0 +1,12 @@
+[
+  { "id": "D1", "name": "Dr. Andrei Popescu", "departmentId": "DEP1", "licenseNumber": "LIC-1001", "specialization": "Cardiology", "yearsOfExperience": 15 },
+  { "id": "D2", "name": "Dr. Elena Ionescu", "departmentId": "DEP2", "licenseNumber": "LIC-1002", "specialization": "Neurology", "yearsOfExperience": 12 },
+  { "id": "D3", "name": "Dr. Mihai Radu", "departmentId": "DEP1", "licenseNumber": "LIC-1003", "specialization": "Cardiology", "yearsOfExperience": 8 },
+  { "id": "D4", "name": "Dr. Ioana Dumitrescu", "departmentId": "DEP3", "licenseNumber": "LIC-1004", "specialization": "Pediatrics", "yearsOfExperience": 10 },
+  { "id": "D5", "name": "Dr. Cristian Stan", "departmentId": "DEP4", "licenseNumber": "LIC-1005", "specialization": "Orthopedics", "yearsOfExperience": 20 },
+  { "id": "D6", "name": "Dr. Maria Matei", "departmentId": "DEP2", "licenseNumber": "LIC-1006", "specialization": "Neurology", "yearsOfExperience": 6 },
+  { "id": "D7", "name": "Dr. Alexandru Munteanu", "departmentId": "DEP5", "licenseNumber": "LIC-1007", "specialization": "General Surgery", "yearsOfExperience": 18 },
+  { "id": "D8", "name": "Dr. Diana Lazar", "departmentId": "DEP3", "licenseNumber": "LIC-1008", "specialization": "Pediatrics", "yearsOfExperience": 9 },
+  { "id": "D9", "name": "Dr. Vlad Moldovan", "departmentId": "DEP4", "licenseNumber": "LIC-1009", "specialization": "Orthopedics", "yearsOfExperience": 14 },
+  { "id": "D10", "name": "Dr. Ana Cojocaru", "departmentId": "DEP5", "licenseNumber": "LIC-1010", "specialization": "General Surgery", "yearsOfExperience": 11 }
+]
