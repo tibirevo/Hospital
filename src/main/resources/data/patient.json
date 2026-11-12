@@ -1,0 +1,12 @@
+[
+  { "id": "P1", "name": "Ionut Marin", "birthDate": "1985-03-15T09:00:00", "diagnosis": "Hypertension" },
+  { "id": "P2", "name": "George Vasile", "birthDate": "1992-07-22T14:30:00", "diagnosis": "Migraine" },
+  { "id": "P3", "name": "Adriana Barbu", "birthDate": "1978-11-05T11:15:00", "diagnosis": "Arrhythmia" },
+  { "id": "P4", "name": "Stefan Neagu", "birthDate": "2015-01-30T08:45:00", "diagnosis": "Bronchitis" },
+  { "id": "P5", "name": "Monica Serban", "birthDate": "1965-06-12T16:20:00", "diagnosis": "Knee Fracture" },
+  { "id": "P6", "name": "Radu Cristea", "birthDate": "1999-09-18T10:00:00", "diagnosis": "Appendicitis" },
+  { "id": "P7", "name": "Teodora Mocanu", "birthDate": "2003-04-25T13:10:00", "diagnosis": "Sprained Ankle" },
+  { "id": "P8", "name": "Florin Stanciu", "birthDate": "1970-12-01T07:30:00", "diagnosis": "Angina" },
+  { "id": "P9", "name": "Oana Dragomir", "birthDate": "2018-08-14T12:00:00", "diagnosis": "Asthma" },
+  { "id": "P10", "name": "Lucian Preda", "birthDate": "1988-02-09T15:45:00", "diagnosis": "Hernia" }
+]

@@ -1,0 +1,12 @@
+[
+  { "id": "R1", "number": "101", "capacity": 2, "departmentId": "DEP1", "status": "AVAILABLE" },
+  { "id": "R2", "number": "102", "capacity": 4, "departmentId": "DEP1", "status": "OCCUPIED" },
+  { "id": "R3", "number": "201", "capacity": 2, "departmentId": "DEP2", "status": "AVAILABLE" },
+  { "id": "R4", "number": "202", "capacity": 3, "departmentId": "DEP2", "status": "AVAILABLE" },
+  { "id": "R5", "number": "301", "capacity": 4, "departmentId": "DEP3", "status": "OCCUPIED" },
+  { "id": "R6", "number": "302", "capacity": 2, "departmentId": "DEP3", "status": "AVAILABLE" },
+  { "id": "R7", "number": "401", "capacity": 3, "departmentId": "DEP4", "status": "OCCUPIED" },
+  { "id": "R8", "number": "402", "capacity": 1, "departmentId": "DEP4", "status": "AVAILABLE" },
+  { "id": "R9", "number": "501", "capacity": 2, "departmentId": "DEP5", "status": "AVAILABLE" },
+  { "id": "R10", "number": "502", "capacity": 6, "departmentId": "DEP5", "status": "OCCUPIED" }
+]

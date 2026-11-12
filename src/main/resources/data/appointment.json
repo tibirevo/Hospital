@@ -1,0 +1,12 @@
+[
+  { "id": "A1", "patientId": "P1", "departmentId": "DEP1", "roomId": "R1", "admissionDate": "2026-11-10T09:00:00", "status": "SCHEDULED" },
+  { "id": "A2", "patientId": "P2", "departmentId": "DEP2", "roomId": "R3", "admissionDate": "2026-11-10T10:30:00", "status": "COMPLETED" },
+  { "id": "A3", "patientId": "P3", "departmentId": "DEP1", "roomId": "R2", "admissionDate": "2026-11-11T11:00:00", "status": "SCHEDULED" },
+  { "id": "A4", "patientId": "P4", "departmentId": "DEP3", "roomId": "R5", "admissionDate": "2026-11-11T12:15:00", "status": "CANCELLED" },
+  { "id": "A5", "patientId": "P5", "departmentId": "DEP4", "roomId": "R7", "admissionDate": "2026-11-12T08:30:00", "status": "SCHEDULED" },
+  { "id": "A6", "patientId": "P6", "departmentId": "DEP5", "roomId": "R9", "admissionDate": "2026-11-12T14:00:00", "status": "COMPLETED" },
+  { "id": "A7", "patientId": "P7", "departmentId": "DEP4", "roomId": "R8", "admissionDate": "2026-11-13T09:45:00", "status": "SCHEDULED" },
+  { "id": "A8", "patientId": "P8", "departmentId": "DEP1", "roomId": "R1", "admissionDate": "2026-11-13T16:00:00", "status": "SCHEDULED" },
+  { "id": "A9", "patientId": "P9", "departmentId": "DEP3", "roomId": "R6", "admissionDate": "2026-11-14T10:00:00", "status": "COMPLETED" },
+  { "id": "A10", "patientId": "P10", "departmentId": "DEP5", "roomId": "R10", "admissionDate": "2026-11-14T13:30:00", "status": "CANCELLED" }
+]
