@@ -1,5 +1,6 @@
 package org.example.hospital.controller;
 
+import org.example.hospital.model.Hospital;
 import org.example.hospital.model.Room;
 import org.example.hospital.service.RoomService;
 import org.springframework.stereotype.Controller;
@@ -34,9 +35,28 @@ public class RoomController {
         return "redirect:/room";
     }
 
+    @GetMapping("/{id}")
+    public String showDetails(@PathVariable("id") String id, Model model) {
+        model.addAttribute("room", roomService.findById(id));
+        return "room/details";
+    }
+
+    @GetMapping("/{id}")
+    public String showEditForm(@PathVariable("id") String id, Model model) {
+        model.addAttribute("room", roomService.findById(id));
+        return "room/edit";
+    }
+
+    @PostMapping("/{id}/edit")
+    public String updateRoom(@PathVariable("id") String id, @ModelAttribute("room") Room room) {
+        room.setId(id);
+        roomService.update(room);
+        return "redirect:/room";
+    }
+
     @PostMapping("/{id}/delete")
     public String deleteRoom(@PathVariable("id") String id) {
-        roomService.deleteByID(id);
+        roomService.deleteById(id);
         return "redirect:/room";
     }
 }
