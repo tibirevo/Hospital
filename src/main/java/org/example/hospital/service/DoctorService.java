@@ -20,7 +20,7 @@ public class DoctorService {
         doctorRepository.save(doctor);
     }
 
-    public Doctor findByID(String id){
+    public Doctor findById(String id){
         for(Doctor doctor : doctorRepository.findAll()){
             if(doctor.getId() != null && doctor.getId().equals(id)){
                 return doctor;
@@ -29,16 +29,15 @@ public class DoctorService {
         return null;
     }
 
-    public void update(Doctor oldDoctor, Doctor newDoctor){
-        doctorRepository.update(oldDoctor, newDoctor);
-    }
-
-    public void delete(Doctor doctor){
-        doctorRepository.delete(doctor);
+    public void update(Doctor newDoctor){
+        Doctor oldDoctor = doctorRepository.findById(newDoctor.getId());
+        if(oldDoctor != null){
+            doctorRepository.update(oldDoctor, newDoctor);
+        }
     }
 
     public void deleteByID(String id){
-        Doctor doctor = this.findByID(id);
+        Doctor doctor = doctorRepository.findById(id);
         if(doctor != null){
             doctorRepository.delete(doctor);
         }

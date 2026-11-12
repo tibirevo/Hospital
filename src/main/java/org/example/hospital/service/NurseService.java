@@ -22,7 +22,7 @@ public class NurseService {
         nurseRepository.save(nurse);
     }
 
-    public Nurse findByID(String id) {
+    public Nurse findById(String id) {
         for (Nurse nurse : nurseRepository.findAll()) {
             if (nurse.getId() != null && nurse.getId().equals(id)) {
                 return nurse;
@@ -31,16 +31,15 @@ public class NurseService {
         return null;
     }
 
-    public void update(Nurse oldNurse, Nurse newNurse) {
-        nurseRepository.update(oldNurse, newNurse);
-    }
-
-    public void delete(Nurse nurse) {
-        nurseRepository.delete(nurse);
+    public void update(Nurse newNurse) {
+        Nurse oldNurse = nurseRepository.findById(newNurse.getId());
+        if(oldNurse != null){
+            nurseRepository.update(oldNurse, newNurse);
+        }
     }
 
     public void deleteByID(String id) {
-        Nurse nurse = this.findByID(id);
+        Nurse nurse = nurseRepository.findById(id);
         if (nurse != null) {
             nurseRepository.delete(nurse);
         }

@@ -31,16 +31,15 @@ public class HospitalService {
         return null;
     }
 
-    public void update(Hospital oldHospital, Hospital newHospital) {
-        hospitalRepository.update(oldHospital, newHospital);
-    }
-
-    public void delete(Hospital hospital) {
-        hospitalRepository.delete(hospital);
+    public void update(Hospital newHospital) {
+        Hospital oldHospital = hospitalRepository.findById(newHospital.getId());
+        if(oldHospital != null){
+            hospitalRepository.update(oldHospital, newHospital);
+        }
     }
 
     public void deleteByID(String id) {
-        Hospital hospital = this.findByID(id);
+        Hospital hospital = hospitalRepository.findById(id);
         if (hospital != null) {
             hospitalRepository.delete(hospital);
         }
