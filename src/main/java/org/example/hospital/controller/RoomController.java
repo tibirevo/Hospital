@@ -41,7 +41,7 @@ public class RoomController {
         return "room/details";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}/edit")
     public String showEditForm(@PathVariable("id") String id, Model model) {
         model.addAttribute("room", roomService.findById(id));
         return "room/edit";

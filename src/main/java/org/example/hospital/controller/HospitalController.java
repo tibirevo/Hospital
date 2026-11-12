@@ -40,7 +40,7 @@ public class HospitalController {
         return "hospital/details";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}/edit")
     public String showEditForm(@PathVariable("id") String id, Model model) {
         model.addAttribute("hospital", hospitalService.findByID(id));
         return "hospital/edit";

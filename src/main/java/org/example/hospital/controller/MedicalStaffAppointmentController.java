@@ -17,7 +17,7 @@ public class MedicalStaffAppointmentController {
     }
 
     @GetMapping
-    public String listMedicalStaffAppointments(Model model) {
+    public String listAll(Model model) {
         model.addAttribute("medicalStaffAppointments", medicalStaffAppointmentService.findAll());
         return "medicalstaffappointment/index";
     }
@@ -29,14 +29,33 @@ public class MedicalStaffAppointmentController {
     }
 
     @PostMapping
-    public String createMedicalStaffAppointment(@ModelAttribute("medicalStaffAppointment") MedicalStaffAppointment item) {
+    public String create(@ModelAttribute("medicalStaffAppointment") MedicalStaffAppointment item) {
         medicalStaffAppointmentService.save(item);
         return "redirect:/medicalstaffappointment";
     }
 
+    @GetMapping("/{id}")
+    public String showDetails(@PathVariable("id") String id, Model model) {
+        model.addAttribute("medicalStaffAppointment", medicalStaffAppointmentService.findById(id));
+        return "medicalStaffAppointment/details";
+    }
+
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable("id") String id, Model model) {
+        model.addAttribute("medicalStaffAppointment", medicalStaffAppointmentService.findById(id));
+        return "medicalStaffAppointment/edit";
+    }
+
+    @PostMapping("/{id}/edit")
+    public String update(@PathVariable("id") String id, @ModelAttribute("medicalStaffAppointment") MedicalStaffAppointment medicalStaffAppointment) {
+        medicalStaffAppointment.setId(id);
+        medicalStaffAppointmentService.update(medicalStaffAppointment);
+        return "redirect:/medicalStaffAppointment";
+    }
+
     @PostMapping("/{id}/delete")
-    public String deleteMedicalStaffAppointment(@PathVariable("id") String id) {
-        medicalStaffAppointmentService.deleteByID(id);
+    public String delete(@PathVariable("id") String id) {
+        medicalStaffAppointmentService.deleteById(id);
         return "redirect:/medicalstaffappointment";
     }
 }
