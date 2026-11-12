@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Hospital Details</title></head>
+<body>
+<h1>Hospital Details</h1>
+<p><strong>ID:</strong> <span th:text="${hospital.id}"></span></p>
+<p><strong>Name:</strong> <span th:text="${hospital.name}"></span></p>
+<p><strong>City:</strong> <span th:text="${hospital.city}"></span></p>
+<p><strong>Address:</strong> <span th:text="${hospital.address}"></span></p>
+<p><strong>Phone Number:</strong> <span th:text="${hospital.phoneNumber}"></span></p>
+<p><a th:href="@{'/hospital/' + ${hospital.id} + '/edit'}">Edit</a> | <a th:href="@{/hospital}">Back to List</a></p>
+</body>
+</html>
