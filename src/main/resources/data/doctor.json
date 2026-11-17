@@ -1,11 +1,4 @@
 [ {
-  "id" : "D3",
-  "name" : "Dr. Mihai Radu",
-  "departmentId" : "DEP1",
-  "licenseNumber" : "LIC-1003",
-  "specialization" : "Cardiology",
-  "yearsOfExperience" : 8
-}, {
   "id" : "D4",
   "name" : "Dr. Ioana Dumitrescu",
   "departmentId" : "DEP3",
