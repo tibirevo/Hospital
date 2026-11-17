@@ -1,18 +1,13 @@
 [ {
   "id" : "P2",
   "name" : "George Vasile",
-  "birthDate" : [ 1992, 7, 22 ],
-  "diagnosis" : "Migraine"
+  "birthDate" : [ 2026, 11, 24 ],
+  "diagnosis" : "Migrene"
 }, {
   "id" : "P3",
   "name" : "Adriana Barbu",
   "birthDate" : [ 1978, 11, 5 ],
   "diagnosis" : "Arrhythmia"
-}, {
-  "id" : "P4",
-  "name" : "Stefan Neagu",
-  "birthDate" : null,
-  "diagnosis" : "Raceala"
 }, {
   "id" : "P5",
   "name" : "Monica Serban",

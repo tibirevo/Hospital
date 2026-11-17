@@ -3,7 +3,7 @@
   "patientId" : "P1",
   "departmentId" : "DEP1",
   "roomId" : "R1",
-  "admissionDate" : [ 2026, 11, 10, 9, 0 ],
+  "admissionDate" : [ 2026, 11, 12, 11, 0 ],
   "status" : "COMPLETED"
 }, {
   "id" : "A4",
